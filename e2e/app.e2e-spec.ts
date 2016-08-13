@@ -1,6 +1,6 @@
 describe('angularjs homepage todo list', function() {
 
-  let expectedMsg = 'My First Angular 2 App - Text Update 2';
+  let expectedMsg = 'My First Angular 2 App - Text Update';
 
   beforeEach(function () {
     browser.get('');
