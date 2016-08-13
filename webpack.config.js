@@ -20,7 +20,7 @@ if (!ENV_TEST) {
   webpackConfig.entry = {
     'polyfills': './src/polyfills.browser.ts',
     'vendor':    './src/vendor.browser.ts',
-    'main':       './src/main.browser.ts',
+    'main':      './src/main.browser.ts',
   };
 
   webpackConfig.output = {
@@ -43,7 +43,7 @@ var defaultConfig = {
   cache: true,
   debug: true,
   output: {
-    filename: '[name].bundle.js',
+    filename: './[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
   },
