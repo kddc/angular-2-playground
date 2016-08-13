@@ -2,6 +2,9 @@
   "name": "angular2-seed",
   "version": "1.0.0",
   "description": "A simple starter Angular2 project",
+  "engines" : {
+    "node" : ">=5.10.1"
+  },
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w",
