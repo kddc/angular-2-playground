@@ -1,29 +1,11 @@
+const ENV_TEST = process.env.NODE_ENV === 'test';
+
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 // Webpack Config
 var webpackConfig = {
-  entry: {
-    'polyfills': './src/polyfills.browser.ts',
-    'vendor':    './src/vendor.browser.ts',
-    'main':       './src/main.browser.ts',
-  },
-
-  output: {
-    path: './dist',
-  },
-
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills']}),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      chunksSortMode: 'dependency'
-    })
-  ],
-
   module: {
     loaders: [
       // .ts files for TypeScript
@@ -32,8 +14,42 @@ var webpackConfig = {
       { test: /\.html$/, loader: 'raw-loader' }
     ]
   }
-
 };
+
+if (!ENV_TEST) {
+  webpackConfig.entry = {
+    'polyfills': './src/polyfills.browser.ts',
+    'vendor':    './src/vendor.browser.ts',
+    'main':       './src/main.browser.ts',
+  };
+
+  webpackConfig.output = {
+    path: './dist',
+  };
+
+  webpackConfig.plugins = [
+    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills']}),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      chunksSortMode: 'dependency'
+    })
+  ];
+}
+
+if (ENV_TEST) {
+  webpackConfig.module.postLoaders = [
+    {
+      test: /\.(js|ts)$/,
+      loader: 'istanbul-instrumenter-loader',
+      include: path.resolve('./src'),
+      exclude: [
+        /\.spec\.ts$/,
+        /node_modules/
+      ]
+    }
+  ];
+}
 
 
 // Our Webpack Defaults
