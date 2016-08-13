@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es5",
-    "outDir": "dist",
-    "rootDir": ".",
+    "module": "commonjs",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+     "removeComments": false,
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
     "node_modules"
