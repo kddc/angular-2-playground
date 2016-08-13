@@ -1,4 +1,4 @@
-## angular2-seed
+## angular2-seed [ ![Codeship Status for kddc/angular-2-playground](https://codeship.com/projects/e38268d0-42e4-0134-c947-6642d9f7ed7f/status?branch=master)](https://codeship.com/projects/168291)
 
 A simple starter project demonstrating the basic concepts of Angular 2.
 
