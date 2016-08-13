@@ -37,21 +37,6 @@ if (!ENV_TEST) {
   ];
 }
 
-if (ENV_TEST) {
-  webpackConfig.module.postLoaders = [
-    {
-      test: /\.(js|ts)$/,
-      loader: 'istanbul-instrumenter-loader',
-      include: path.resolve('./src'),
-      exclude: [
-        /\.spec\.ts$/,
-        /node_modules/
-      ]
-    }
-  ];
-}
-
-
 // Our Webpack Defaults
 var defaultConfig = {
   devtool: 'cheap-module-source-map',
