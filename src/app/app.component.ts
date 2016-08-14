@@ -1,11 +1,11 @@
-require('public/global.css');
-require('public/overlay.css');
+require('public/global.scss');
+require('public/overlay.scss');
 
 import { Component } from '@angular/core';
 
 @Component({
     selector: 'app',
     templateUrl: './app.component.html',
-    styles: [ require('./app.component.css')]
+    styles: [ require('./app.component.scss')]
 })
 export class AppComponent { }

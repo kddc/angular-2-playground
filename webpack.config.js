@@ -9,10 +9,24 @@ var webpackConfig = {
   module: {
     loaders: [
       // .ts files for TypeScript
-      { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
-      { test: /\.css$/, loader: 'style-loader!css-loader', include: [ path.resolve(__dirname, './src/public') ]},
-      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'], exclude: [ path.resolve(__dirname, './src/public') ]},
-      { test: /\.html$/, loader: 'raw-loader' }
+      {
+        test: /\.ts$/,
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+        include: [ path.resolve(__dirname, './src/public') ]
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['to-string', 'css', 'sass'],
+        exclude: [ path.resolve(__dirname, './src/public') ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw-loader'
+      }
     ]
   }
 };
