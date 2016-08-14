@@ -471,7 +471,7 @@ webpackJsonp([2],{
 /***/ 805:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "/img/98b4ae9532edb1cc3958fe66ba53b0f5.jpg";
+	module.exports = __webpack_require__.p + "img/98b4ae9532edb1cc3958fe66ba53b0f5.jpg";
 
 /***/ },
 

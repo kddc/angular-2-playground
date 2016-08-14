@@ -1,5 +1,6 @@
 const ENV_TEST = process.env.NODE_ENV === 'test';
 
+var argv = require('yargs').argv;
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -57,7 +58,9 @@ if (!ENV_TEST) {
       name: ['main', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      title: 'Test',
+      base: argv.base || '/',
+      template: 'src/index.ejs',
       chunksSortMode: 'dependency'
     })
     // new webpack.optimize.UglifyJsPlugin({
