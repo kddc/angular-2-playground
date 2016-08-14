@@ -20,7 +20,7 @@
     "webdriver:update": "webdriver-manager update",
     "webdriver:start": "webdriver-manager start",
     "pree2e": "npm run webdriver:update -- --standalone",
-    "e2e": "tsc && npm run build && concurrently \"http-server dist -s -p 3000\" \"protractor protractor.config.js\" --kill-others --success first"
+    "e2e": "tsc && npm run build && concurrently \"http-server dist -s -p 3000\" \"protractor protractor.conf.js\" --kill-others --success first"
   },
   "license": "MIT",
   "dependencies": {
