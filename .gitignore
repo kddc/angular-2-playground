@@ -9,7 +9,8 @@ e2e/**/*.js.map
 _test-output
 _temp
 
-!/dist/*
+!/dist/*.js
+/dist/*.js.map
 
 !webpack.config.js
 !karma*.js
