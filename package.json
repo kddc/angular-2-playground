@@ -22,9 +22,6 @@
     "pree2e": "npm run webdriver:update -- --standalone",
     "e2e": "tsc && npm run build && concurrently \"http-server dist -s -p 3000\" \"protractor protractor.config.js\" --kill-others --success first"
   },
-  "contributors": [
-    "kddc <jutiemann@gmail.com>"
-  ],
   "license": "MIT",
   "dependencies": {
     "@angular/common": "2.0.0-rc.5",
@@ -75,7 +72,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kddc/angular-2-playground"
+    "url": "git+https://github.com/kddc/angular-2-playground.git"
   },
   "bugs": {
     "url": "https://github.com/kddc/angular-2-playground/issues"
