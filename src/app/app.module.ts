@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {MdButtonToggleModule} from '@angular2-material/button-toggle/button-toggle';

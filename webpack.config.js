@@ -44,11 +44,17 @@ if (!ENV_TEST) {
 
   webpackConfig.plugins = [
     new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills']}),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['main', 'vendor', 'polyfills']
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       chunksSortMode: 'dependency'
     })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: { warnings: false },
+    //   mangle: false
+    // })
   ];
 }
 
