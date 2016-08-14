@@ -37,7 +37,7 @@ if (!ENV_TEST) {
   ];
 }
 
-// Our Webpack Defaults
+// Webpack Defaults from angular class
 var defaultConfig = {
   devtool: 'cheap-module-source-map',
   cache: true,

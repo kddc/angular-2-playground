@@ -64,30 +64,6 @@ webpackJsonp([2],{
 	var __metadata = (this && this.__metadata) || function (k, v) {
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
-	// import {NgModule} from '@angular/core'
-	// import {RouterModule} from "@angular/router";
-	// import {rootRouterConfig} from "./app.routes";
-	// import {AppComponent} from "./app.component";
-	// import {Github} from "./github/shared/github";
-	// import {FormsModule} from "@angular/forms";
-	// import {BrowserModule} from "@angular/platform-browser";
-	// import {HttpModule} from "@angular/http";
-	// import {About} from './about/about';
-	// import {Home} from './home/home';
-	// import {RepoBrowser} from './github/repo-browser/repo-browser';
-	// import {RepoList} from './github/repo-list/repo-list';
-	// import {RepoDetail} from './github/repo-detail/repo-detail';
-	// import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-	//
-	// @NgModule({
-	//   declarations: [AppComponent, About, RepoBrowser, RepoList, RepoDetail, Home],
-	//   imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig)],
-	//   providers   : [Github, {provide: LocationStrategy, useClass: HashLocationStrategy}],
-	//   bootstrap   : [AppComponent]
-	// })
-	// export class AppModule {
-	//
-	// }
 	var core_1 = __webpack_require__(1);
 	var platform_browser_1 = __webpack_require__(86);
 	var app_component_1 = __webpack_require__(502);
