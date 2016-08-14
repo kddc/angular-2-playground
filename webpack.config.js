@@ -25,13 +25,18 @@ var webpackConfig = {
       },
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
-        loader: "file-loader?name=/img/[hash].[ext]"
+        loaders: ['file-loader?name=/img/[hash].[ext]', 'image-webpack']
       },
       {
         test: /\.html$/,
         loader: 'raw-loader'
       }
     ]
+  },
+  imageWebpackLoader: {
+    progressive:true,
+    optimizationLevel: 7,
+    interlaced: false
   }
 };
 
