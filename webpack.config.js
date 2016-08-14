@@ -16,12 +16,16 @@ var webpackConfig = {
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass'],
-        include: [ path.resolve(__dirname, './src/public') ]
+        include: [ path.resolve(__dirname, './src/assets') ]
       },
       {
         test: /\.scss$/,
         loaders: ['to-string', 'css', 'sass'],
-        exclude: [ path.resolve(__dirname, './src/public') ]
+        exclude: [ path.resolve(__dirname, './src/assets') ]
+      },
+      {
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        loader: "file-loader?name=/img/[hash].[ext]"
       },
       {
         test: /\.html$/,
