@@ -25,7 +25,7 @@ var webpackConfig = {
       },
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
-        loaders: ['file-loader?name=/img/[hash].[ext]', 'image-webpack']
+        loaders: ['file-loader?name=img/[hash].[ext]', 'image-webpack']
       },
       {
         test: /\.html$/,
@@ -73,7 +73,7 @@ var defaultConfig = {
   cache: true,
   debug: true,
   output: {
-    filename: './[name].bundle.js',
+    filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
   },
