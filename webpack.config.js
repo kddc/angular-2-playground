@@ -10,7 +10,8 @@ var webpackConfig = {
     loaders: [
       // .ts files for TypeScript
       { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
-      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
+      { test: /\.css$/, loader: 'style-loader!css-loader', include: [ path.resolve(__dirname, './src/public') ]},
+      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'], exclude: [ path.resolve(__dirname, './src/public') ]},
       { test: /\.html$/, loader: 'raw-loader' }
     ]
   }
