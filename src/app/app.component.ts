@@ -1,5 +1,4 @@
-require('assets/styles/global.scss');
-require('assets/styles/overlay.scss');
+require('assets/styles/main.scss');
 
 import { Component } from '@angular/core';
 
