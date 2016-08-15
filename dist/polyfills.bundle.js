@@ -100,7 +100,7 @@
 
 	// Polyfills
 	"use strict";
-	__webpack_require__(806); // Internet Explorer 9 support
+	__webpack_require__(807); // Internet Explorer 9 support
 	// import 'core-js/es6';
 	// Added parts of es6 which are necessary for your project or your browser support requirements.
 	__webpack_require__(656);
@@ -6756,7 +6756,8 @@
 /* 803 */,
 /* 804 */,
 /* 805 */,
-/* 806 */
+/* 806 */,
+/* 807 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {// function.name (all IE)
@@ -6893,7 +6894,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 807 */
+/* 808 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -7059,7 +7060,6 @@
 
 
 /***/ },
-/* 808 */,
 /* 809 */,
 /* 810 */,
 /* 811 */,
@@ -8757,7 +8757,7 @@
 
 	/***/ }
 	/******/ ]);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(807)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(808)))
 
 /***/ }
 /******/ ]);

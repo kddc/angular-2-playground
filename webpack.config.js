@@ -7,6 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
+  // publicPath: './src/assets',
   module: {
     loaders: [
       // .ts files for TypeScript
@@ -16,12 +17,12 @@ var webpackConfig = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
+        loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap'],
         include: [ path.resolve(__dirname, './src/assets') ]
       },
       {
         test: /\.scss$/,
-        loaders: ['to-string', 'css', 'sass'],
+        loaders: ['css', 'resolve-url', 'sass?sourceMap'],
         exclude: [ path.resolve(__dirname, './src/assets') ]
       },
       {
@@ -30,15 +31,33 @@ var webpackConfig = {
       },
       {
         test: /\.html$/,
-        loader: 'raw-loader'
+        loader: "html-loader"
       }
     ]
   },
   imageWebpackLoader: {
+    root: path.resolve(__dirname, './src/assets'),
     progressive:true,
     optimizationLevel: 7,
     interlaced: false
   }
+  ,
+  htmlLoader: {
+    root: path.resolve(__dirname, './src/assets'),
+    minimize: true,
+    removeAttributeQuotes: false,
+    caseSensitive: true,
+    customAttrSurround: [
+      [/#/, /(?:)/],
+      [/\*/, /(?:)/],
+      [/\[?\(?/, /(?:)/]
+    ],
+    customAttrAssign: [/\)?\]?=/]
+  }
+  // ,
+  // resolveUrlLoader: {
+  //   root: path.resolve(__dirname, './src/assets')
+  // }
 };
 
 if (!ENV_TEST) {
@@ -81,7 +100,11 @@ var defaultConfig = {
     chunkFilename: '[id].chunk.js'
   },
 
+
   resolve: {
+    // alias: {
+    //   images: path.join(__dirname, 'src/assets/images/'),
+    // },
     root: [ path.join(__dirname, 'src') ],
     extensions: ['', '.ts', '.js']
   },

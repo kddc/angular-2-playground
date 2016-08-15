@@ -25,6 +25,7 @@ import {MdMenuModule} from '@angular2-material/menu/menu';
 import {RtlModule} from '@angular2-material/core/rtl/dir';
 
 import { AppComponent }  from './app.component';
+import { TestComponent } from './test/test.component'
 
 @NgModule({
   imports: [
@@ -52,7 +53,7 @@ import { AppComponent }  from './app.component';
     PortalModule,
     RtlModule
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, TestComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -346,7 +346,7 @@ webpackJsonp([2],{
 	    AppComponent = __decorate([
 	        core_1.Component({
 	            selector: 'app',
-	            template: __webpack_require__(808),
+	            template: __webpack_require__(806),
 	            styles: [__webpack_require__(1013)]
 	        }), 
 	        __metadata('design:paramtypes', [])
@@ -446,7 +446,7 @@ webpackJsonp([2],{
 
 
 	// module
-	exports.push([module.id, "body {\n  width: 100%;\n  min-height: 100%;\n  margin: 0;\n  font-family: 'Roboto',Helvetica,sans-serif;\n  background-image: url(" + __webpack_require__(805) + "); }\n", ""]);
+	exports.push([module.id, "body {\n  width: 100%;\n  min-height: 100%;\n  margin: 0;\n  font-family: 'Roboto',Helvetica,sans-serif;\n  background-color: #f0f0f0; }\n", ""]);
 
 	// exports
 
@@ -475,10 +475,10 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 808:
-/***/ function(module, exports) {
+/***/ 806:
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<md-sidenav-layout>\n  <md-sidenav #sidenav mode=\"side\" class=\"app-sidenav\">\n    Sidenav\n  </md-sidenav>\n\n  <md-toolbar color=\"primary\">\n    <button class=\"app-icon-button\" (click)=\"sidenav.toggle()\">\n      <i class=\"material-icons app-toolbar-menu\">menu</i>\n    </button>\n\n    Angular 2 - Test\n\n    <span class=\"app-toolbar-filler\"></span>\n  </md-toolbar>\n\n  <div class=\"app-content\">\n\n    <md-card>\n      <button md-button>FLAT</button>\n      <button md-raised-button>RAISED</button>\n      <button md-raised-button color=\"primary\">PRIMARY RAISED</button>\n      <button md-raised-button color=\"accent\">ACCENT RAISED</button>\n    </md-card>\n\n    <md-card>\n      <md-checkbox>Unchecked</md-checkbox>\n      <md-checkbox [checked]=\"true\">Checked</md-checkbox>\n      <md-checkbox [indeterminate]=\"true\">Indeterminate</md-checkbox>\n      <md-checkbox [disabled]=\"true\">Disabled</md-checkbox>\n    </md-card>\n\n    <md-card>\n      <md-radio-button name=\"symbol\">Alpha</md-radio-button>\n      <md-radio-button name=\"symbol\">Beta</md-radio-button>\n      <md-radio-button name=\"symbol\" disabled>Gamma</md-radio-button>\n    </md-card>\n\n    <md-card class=\"app-input-section\">\n      <md-input placeholder=\"First name\"></md-input>\n\n      <md-input #nickname placeholder=\"Nickname\" maxlength=\"50\">\n        <md-hint align=\"end\">\n          {{nickname.characterCount}} / 50\n        </md-hint>\n      </md-input>\n\n      <md-input>\n        <md-placeholder>\n          <i class=\"material-icons app-input-icon\">android</i> Favorite phone\n        </md-placeholder>\n      </md-input>\n\n      <md-input placeholder=\"Motorcycle model\">\n        <span md-prefix>\n          <i class=\"material-icons app-input-icon\">motorcycle</i>\n          &nbsp;\n        </span>\n      </md-input>\n    </md-card>\n\n    <md-card>\n      <md-list class=\"app-list\">\n        <md-list-item *ngFor=\"let food of foods\">\n          <h3 md-line>{{food.name}}</h3>\n          <p md-line class=\"demo-secondary-text\">{{food.rating}}</p>\n        </md-list-item>\n      </md-list>\n    </md-card>\n\n    <md-card>\n      <md-spinner class=\"app-spinner\"></md-spinner>\n      <md-spinner color=\"accent\" class=\"app-spinner\"></md-spinner>\n    </md-card>\n\n    <md-card>\n      <label>\n        Indeterminate progress-bar\n        <md-progress-bar\n            class=\"app-progress\"\n            mode=\"indeterminate\"\n            aria-label=\"Indeterminate progress-bar example\"></md-progress-bar>\n      </label>\n\n      <label>\n        Determinate progress bar - {{progress}}%\n        <md-progress-bar\n            class=\"app-progress\"\n            color=\"accent\"\n            mode=\"determinate\"\n            [value]=\"progress\"\n            aria-label=\"Determinate progress-bar example\"></md-progress-bar>\n      </label>\n    </md-card>\n\n    <md-card>\n      <md-tab-group>\n        <md-tab>\n          <template md-tab-label>\n            Earth\n          </template>\n          <template md-tab-content>\n            <p>EARTH</p>\n          </template>\n        </md-tab>\n        <md-tab>\n          <template md-tab-label>\n            Fire\n          </template>\n          <template md-tab-content>\n            <p>FIRE</p>\n          </template>\n        </md-tab>\n      </md-tab-group>\n    </md-card>\n\n\n    <md-card>\n      <md-icon>build</md-icon>\n    </md-card>\n\n  </div>\n\n</md-sidenav-layout>\n\n<span class=\"app-action\">\n  <button md-fab><md-icon>check circle</md-icon></button>\n</span>\n"
+	module.exports = "<md-layout>\n  <md-toolbar color=\"primary\">\n    Angular 2\n  </md-toolbar>\n\n  <div class=\"app-content\">\n\n    <md-card>\n      <div class=\"md-card\">\n\n        <img md-card-image alt=\"Porter\" src=\"" + __webpack_require__(805) + "\">\n        <img md-card-image alt=\"Porter\" src=\"https://tripl-staging-files.s3.amazonaws.com/hotplace_image/49c39d5b-c4c3-430e-8be1-5d525faf6da4/f09a0c36-5f80-4f19-a343-4bdf70c6a09a.jpg\">\n\n        <md-card-title>Porter</md-card-title>\n\n        <md-card-content class=\"secondary\">\n          Very ipsum such dolor amet wow very divs very content concern, very much develop much spans\n          much layer so so scare such spans such padding many beta very layer much excuse.\n        </md-card-content>\n\n      </div>\n    </md-card>\n\n  </div>\n\n</md-layout>\n";
 
 /***/ },
 
@@ -539,7 +539,7 @@ webpackJsonp([2],{
 /***/ 1013:
 /***/ function(module, exports) {
 
-	module.exports = ".app-content {\n  padding: 15px; }\n\n.app-content md-card {\n  margin: 15px; }\n\n.app-sidenav {\n  padding: 10px;\n  min-width: 100px; }\n\n.app-content md-checkbox {\n  margin: 10px; }\n\n.app-toolbar-filler {\n  flex: 1 1 auto; }\n\n.app-icon-button {\n  box-shadow: none;\n  user-select: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  filter: none;\n  font-weight: normal;\n  height: auto;\n  line-height: inherit;\n  margin: 0;\n  min-width: 0;\n  padding: 0;\n  text-align: left;\n  text-decoration: none; }\n  .app-icon-button .app-toolbar-menu {\n    padding: 0 14px 0 14px;\n    color: white;\n    width: 24px; }\n\n.app-action {\n  display: inline-block;\n  position: fixed;\n  bottom: 20px;\n  right: 20px; }\n\n.app-spinner {\n  height: 30px;\n  width: 30px;\n  display: inline-block; }\n\n.app-input-icon {\n  font-size: 16px; }\n\n.app-list {\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  width: 350px;\n  margin: 20px; }\n\n.app-progress {\n  margin: 20px 0; }\n"
+	module.exports = ".app-content {\n  padding: 0px; }\n\n.app-content md-card {\n  margin: 15px; }\n\n.app-sidenav {\n  padding: 10px;\n  min-width: 100px; }\n\n.app-content md-checkbox {\n  margin: 10px; }\n\n.app-toolbar-filler {\n  flex: 1 1 auto; }\n\n.app-icon-button {\n  box-shadow: none;\n  user-select: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  filter: none;\n  font-weight: normal;\n  height: auto;\n  line-height: inherit;\n  margin: 0;\n  min-width: 0;\n  padding: 0;\n  text-align: left;\n  text-decoration: none; }\n  .app-icon-button .app-toolbar-menu {\n    padding: 0 14px 0 14px;\n    color: white;\n    width: 24px; }\n\n.app-action {\n  display: inline-block;\n  position: fixed;\n  bottom: 20px;\n  right: 20px; }\n\n.app-spinner {\n  height: 30px;\n  width: 30px;\n  display: inline-block; }\n\n.app-input-icon {\n  font-size: 16px; }\n\n.app-list {\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  width: 350px;\n  margin: 20px; }\n\n.app-progress {\n  margin: 20px 0; }\n"
 
 /***/ }
 
