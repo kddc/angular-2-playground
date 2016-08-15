@@ -4,8 +4,8 @@ webpackJsonp([2],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var platform_browser_dynamic_1 = __webpack_require__(406);
-	var app_module_1 = __webpack_require__(642);
+	var platform_browser_dynamic_1 = __webpack_require__(408);
+	var app_module_1 = __webpack_require__(643);
 	// require('/src/public/overlay.css');
 	// enableProdMode()
 	platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule)
@@ -14,7 +14,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 489:
+/***/ 204:
 /***/ function(module, exports) {
 
 	/*
@@ -71,7 +71,14 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 520:
+/***/ 205:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/98b4ae9532edb1cc3958fe66ba53b0f5.jpg";
+
+/***/ },
+
+/***/ 521:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -324,7 +331,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 641:
+/***/ 642:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -337,8 +344,8 @@ webpackJsonp([2],{
 	var __metadata = (this && this.__metadata) || function (k, v) {
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
-	__webpack_require__(1011);
-	__webpack_require__(1012);
+	__webpack_require__(1015);
+	__webpack_require__(1016);
 	var core_1 = __webpack_require__(1);
 	var AppComponent = (function () {
 	    function AppComponent() {
@@ -346,8 +353,8 @@ webpackJsonp([2],{
 	    AppComponent = __decorate([
 	        core_1.Component({
 	            selector: 'app',
-	            template: __webpack_require__(806),
-	            styles: [__webpack_require__(1013)]
+	            template: __webpack_require__(809),
+	            styles: [__webpack_require__(805).toString()]
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], AppComponent);
@@ -358,7 +365,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 642:
+/***/ 643:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -373,29 +380,30 @@ webpackJsonp([2],{
 	};
 	var core_1 = __webpack_require__(1);
 	var platform_browser_1 = __webpack_require__(61);
-	var button_toggle_1 = __webpack_require__(423);
-	var button_1 = __webpack_require__(424);
-	var checkbox_1 = __webpack_require__(426);
-	var radio_1 = __webpack_require__(447);
-	var slide_toggle_1 = __webpack_require__(449);
-	var slider_1 = __webpack_require__(450);
-	var sidenav_1 = __webpack_require__(448);
-	var list_1 = __webpack_require__(440);
-	var grid_list_1 = __webpack_require__(436);
-	var card_1 = __webpack_require__(425);
-	var icon_1 = __webpack_require__(438);
-	var progress_circle_1 = __webpack_require__(446);
-	var progress_bar_1 = __webpack_require__(445);
-	var input_1 = __webpack_require__(439);
-	var tabs_1 = __webpack_require__(451);
-	var toolbar_1 = __webpack_require__(452);
-	var tooltip_1 = __webpack_require__(453);
+	var button_toggle_1 = __webpack_require__(425);
+	var button_1 = __webpack_require__(426);
+	var checkbox_1 = __webpack_require__(428);
+	var radio_1 = __webpack_require__(449);
+	var slide_toggle_1 = __webpack_require__(451);
+	var slider_1 = __webpack_require__(452);
+	var sidenav_1 = __webpack_require__(450);
+	var list_1 = __webpack_require__(442);
+	var grid_list_1 = __webpack_require__(438);
+	var card_1 = __webpack_require__(427);
+	var icon_1 = __webpack_require__(440);
+	var progress_circle_1 = __webpack_require__(448);
+	var progress_bar_1 = __webpack_require__(447);
+	var input_1 = __webpack_require__(441);
+	var tabs_1 = __webpack_require__(453);
+	var toolbar_1 = __webpack_require__(454);
+	var tooltip_1 = __webpack_require__(455);
 	var ripple_1 = __webpack_require__(134);
 	var portal_directives_1 = __webpack_require__(75);
 	var overlay_directives_1 = __webpack_require__(191);
-	var menu_1 = __webpack_require__(444);
+	var menu_1 = __webpack_require__(446);
 	var dir_1 = __webpack_require__(109);
-	var app_component_1 = __webpack_require__(641);
+	var app_component_1 = __webpack_require__(642);
+	var test_component_1 = __webpack_require__(644);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -426,7 +434,7 @@ webpackJsonp([2],{
 	                portal_directives_1.PortalModule,
 	                dir_1.RtlModule
 	            ],
-	            declarations: [app_component_1.AppComponent],
+	            declarations: [app_component_1.AppComponent, test_component_1.TestComponent],
 	            bootstrap: [app_component_1.AppComponent]
 	        }), 
 	        __metadata('design:paramtypes', [])
@@ -438,67 +446,129 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 803:
+/***/ 644:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(489)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\n  width: 100%;\n  min-height: 100%;\n  margin: 0;\n  font-family: 'Roboto',Helvetica,sans-serif;\n  background-color: #f0f0f0; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 804:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(489)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/** The overlay-container is an invisible element which contains all individual overlays. */\n.md-overlay-container {\n  position: absolute;\n  pointer-events: none;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%; }\n\n/** A single overlay pane. */\n.md-overlay-pane {\n  position: absolute;\n  pointer-events: auto;\n  box-sizing: border-box;\n  z-index: 1000; }\n", ""]);
-
-	// exports
-
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(1);
+	var TestComponent = (function () {
+	    function TestComponent() {
+	    }
+	    TestComponent = __decorate([
+	        core_1.Component({
+	            selector: 'test',
+	            template: __webpack_require__(810),
+	            styles: [__webpack_require__(806).toString()]
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], TestComponent);
+	    return TestComponent;
+	}());
+	exports.TestComponent = TestComponent;
+	
 
 /***/ },
 
 /***/ 805:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "img/98b4ae9532edb1cc3958fe66ba53b0f5.jpg";
+	exports = module.exports = __webpack_require__(204)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".app-content {\n  padding: 0px;\n}\n\n.app-content md-card {\n  margin: 15px;\n}\n\n.app-sidenav {\n  padding: 10px;\n  min-width: 100px;\n}\n\n.app-content md-checkbox {\n  margin: 10px;\n}\n\n.app-toolbar-filler {\n  flex: 1 1 auto;\n}\n\n.app-icon-button {\n  box-shadow: none;\n  user-select: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  filter: none;\n  font-weight: normal;\n  height: auto;\n  line-height: inherit;\n  margin: 0;\n  min-width: 0;\n  padding: 0;\n  text-align: left;\n  text-decoration: none;\n}\n\n.app-icon-button .app-toolbar-menu {\n  padding: 0 14px 0 14px;\n  color: white;\n  width: 24px;\n}\n\n.app-action {\n  display: inline-block;\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n}\n\n.app-spinner {\n  height: 30px;\n  width: 30px;\n  display: inline-block;\n}\n\n.app-input-icon {\n  font-size: 16px;\n}\n\n.app-list {\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  width: 350px;\n  margin: 20px;\n}\n\n.app-progress {\n  margin: 20px 0;\n}\n\n", ""]);
+
+	// exports
+
 
 /***/ },
 
 /***/ 806:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<md-layout>\n  <md-toolbar color=\"primary\">\n    Angular 2\n  </md-toolbar>\n\n  <div class=\"app-content\">\n\n    <md-card>\n      <div class=\"md-card\">\n\n        <img md-card-image alt=\"Porter\" src=\"" + __webpack_require__(805) + "\">\n        <img md-card-image alt=\"Porter\" src=\"https://tripl-staging-files.s3.amazonaws.com/hotplace_image/49c39d5b-c4c3-430e-8be1-5d525faf6da4/f09a0c36-5f80-4f19-a343-4bdf70c6a09a.jpg\">\n\n        <md-card-title>Porter</md-card-title>\n\n        <md-card-content class=\"secondary\">\n          Very ipsum such dolor amet wow very divs very content concern, very much develop much spans\n          much layer so so scare such spans such padding many beta very layer much excuse.\n        </md-card-content>\n\n      </div>\n    </md-card>\n\n  </div>\n\n</md-layout>\n";
+	exports = module.exports = __webpack_require__(204)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#test {\n  height: 300px;\n  width: 100%;\n  background-size: cover;\n  background-image: url(" + __webpack_require__(205) + ");\n}\n\n", ""]);
+
+	// exports
+
 
 /***/ },
 
-/***/ 1011:
+/***/ 807:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(204)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  width: 100%;\n  min-height: 100%;\n  margin: 0;\n  font-family: 'Roboto',Helvetica,sans-serif;\n  background-color: #f0f0f0;\n  background-image: url(" + __webpack_require__(205) + ");\n}\n\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 808:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(204)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/** The overlay-container is an invisible element which contains all individual overlays. */\n\n.md-overlay-container {\n  position: absolute;\n  pointer-events: none;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n}\n\n/** A single overlay pane. */\n\n.md-overlay-pane {\n  position: absolute;\n  pointer-events: auto;\n  box-sizing: border-box;\n  z-index: 1000;\n}\n\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 809:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<md-layout> <md-toolbar color=\"primary\"> Angular 2 </md-toolbar> <div class=\"app-content\"> <test></test> <md-card> <div class=\"md-card\"> <img md-card-image alt=\"Porter\" src=\"" + __webpack_require__(205) + "\"> <md-card-title>Porter</md-card-title> <md-card-content class=\"secondary\"> Very ipsum such dolor amet wow very divs very content concern, very much develop much spans much layer so so scare such spans such padding many beta very layer much excuse. </md-card-content> </div> </md-card> </div> </md-layout>";
+
+/***/ },
+
+/***/ 810:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<md-card> <div class=\"md-card\"> <div id=\"test\"> </div> <img md-card-image alt=\"Porter\" src=\"" + __webpack_require__(205) + "\" style=\"min-height:335px\"> <md-card-title>Porter</md-card-title> <md-card-content class=\"secondary\"> Very ipsum such dolor amet wow very divs very content concern, very much develop much. </md-card-content> </div> </md-card>";
+
+/***/ },
+
+/***/ 1015:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(803);
+	var content = __webpack_require__(807);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(520)(content, {});
+	var update = __webpack_require__(521)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./global.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./global.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/resolve-url-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./global.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/resolve-url-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./global.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -509,23 +579,23 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 1012:
+/***/ 1016:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(804);
+	var content = __webpack_require__(808);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(520)(content, {});
+	var update = __webpack_require__(521)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./overlay.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./overlay.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/resolve-url-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./overlay.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/resolve-url-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./overlay.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -533,13 +603,6 @@ webpackJsonp([2],{
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
-
-/***/ },
-
-/***/ 1013:
-/***/ function(module, exports) {
-
-	module.exports = ".app-content {\n  padding: 0px; }\n\n.app-content md-card {\n  margin: 15px; }\n\n.app-sidenav {\n  padding: 10px;\n  min-width: 100px; }\n\n.app-content md-checkbox {\n  margin: 10px; }\n\n.app-toolbar-filler {\n  flex: 1 1 auto; }\n\n.app-icon-button {\n  box-shadow: none;\n  user-select: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  filter: none;\n  font-weight: normal;\n  height: auto;\n  line-height: inherit;\n  margin: 0;\n  min-width: 0;\n  padding: 0;\n  text-align: left;\n  text-decoration: none; }\n  .app-icon-button .app-toolbar-menu {\n    padding: 0 14px 0 14px;\n    color: white;\n    width: 24px; }\n\n.app-action {\n  display: inline-block;\n  position: fixed;\n  bottom: 20px;\n  right: 20px; }\n\n.app-spinner {\n  height: 30px;\n  width: 30px;\n  display: inline-block; }\n\n.app-input-icon {\n  font-size: 16px; }\n\n.app-list {\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  width: 350px;\n  margin: 20px; }\n\n.app-progress {\n  margin: 20px 0; }\n"
 
 /***/ }
 

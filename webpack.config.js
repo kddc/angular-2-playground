@@ -77,7 +77,7 @@ if (!ENV_TEST) {
       name: ['main', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      title: 'Test',
+      favicon: './src/favicon.ico',
       base: argv.base || '/',
       template: 'src/index.ejs',
       chunksSortMode: 'dependency'
