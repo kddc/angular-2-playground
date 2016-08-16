@@ -1,22 +1,24 @@
 <md-layout>
   <md-toolbar color="primary">
-    Angular 2
+    {{title}}
   </md-toolbar>
 
   <div class="app-content">
 
-    <test></test>
-
     <md-card>
       <div class="md-card">
 
-        <img md-card-image alt="Porter" src="/images/bg.jpg">
+        <!-- <img md-card-image alt="Porter" src="/images/bg.jpg"> -->
 
-        <md-card-title>Porter</md-card-title>
+        <md-card-title>{{hero.name}} details!</md-card-title>
 
         <md-card-content class="secondary">
-          Very ipsum such dolor amet wow very divs very content concern, very much develop much spans
-          much layer so so scare such spans such padding many beta very layer much excuse.
+          <div><label>id: </label>{{hero.id}}</div>
+          <div>
+            <label>name: </label>
+            <input [(ngModel)]="hero.name" placeholder="name">
+            <input [ngModel]="hero.name" placeholder="name">
+          </div>
         </md-card-content>
 
       </div>
