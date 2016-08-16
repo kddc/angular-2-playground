@@ -18,12 +18,13 @@ export class AppComponent {
   title = 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
+  onSelect: Function;
+  heroService: HeroService;
 
   constructor(heroService: HeroService) {
     this.heroes = heroService.getHeroes();
+    this.heroService = heroService;
   }
-
-  onSelect: Function;
 
   selectHero(hero: Hero) {
     this.selectedHero = hero;
