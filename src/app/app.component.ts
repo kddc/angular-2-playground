@@ -4,40 +4,32 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card/card';
 import {MD_BUTTON_DIRECTIVES} from '@angular2-material/button/button';
 import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar/toolbar';
 
-import { Hero, HeroListComponent, HeroDetailComponent } from './heroes';
-
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
+import { Hero, HeroService, HeroListComponent, HeroDetailComponent } from './heroes';
 
 @Component({
     selector   : 'app',
     templateUrl: './app.component.html',
     styles     : [ require('./app.component.scss').toString() ],
-    directives : [ HeroListComponent, HeroDetailComponent ]
+    directives : [ HeroListComponent, HeroDetailComponent ],
+    providers  : [ HeroService ]
 })
 
 export class AppComponent {
-  title  = 'Tour of Heroes';
-  heroes = HEROES;
+  title = 'Tour of Heroes';
+  heroes: Hero[];
   selectedHero: Hero;
 
-  public onSelect: Function;
+  constructor(heroService: HeroService) {
+    this.heroes = heroService.getHeroes();
+  }
 
-  public selectHero(hero: Hero) {
+  onSelect: Function;
+
+  selectHero(hero: Hero) {
     this.selectedHero = hero;
   }
 
-  public ngOnInit() {
+  ngOnInit() {
     this.onSelect = this.selectHero.bind(this);
   }
 }
