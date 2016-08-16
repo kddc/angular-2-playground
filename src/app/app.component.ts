@@ -4,7 +4,7 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card/card';
 import {MD_BUTTON_DIRECTIVES} from '@angular2-material/button/button';
 import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar/toolbar';
 
-import { Hero, HeroListComponent, HeroDetailComponent } from './heroes/index';
+import { Hero, HeroListComponent, HeroDetailComponent } from './heroes';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
