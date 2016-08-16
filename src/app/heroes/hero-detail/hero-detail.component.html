@@ -1,0 +1,11 @@
+<md-card>
+  <img md-card-image alt="Porter" src="/images/bg.jpg">
+  <md-card-title>{{ hero.name }} details!</md-card-title>
+  <md-card-content class="secondary">
+    <div><label>id: </label>{{ hero.id }}</div>
+    <div>
+      <label>name: </label>
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </div>
+  </md-card-content>
+</md-card>

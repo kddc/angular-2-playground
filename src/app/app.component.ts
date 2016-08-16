@@ -4,10 +4,7 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card/card';
 import {MD_BUTTON_DIRECTIVES} from '@angular2-material/button/button';
 import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar/toolbar';
 
-export class Hero {
-  id: number;
-  name: string;
-}
+import { Hero, HeroListComponent, HeroDetailComponent } from './heroes/index';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -23,16 +20,24 @@ const HEROES: Hero[] = [
 ];
 
 @Component({
-    selector: 'app',
+    selector   : 'app',
     templateUrl: './app.component.html',
-    styles: [ require('./app.component.scss').toString() ],
-    directives: [ MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, MD_TOOLBAR_DIRECTIVES ]
+    styles     : [ require('./app.component.scss').toString() ],
+    directives : [ HeroListComponent, HeroDetailComponent ]
 })
 
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title  = 'Tour of Heroes';
   heroes = HEROES;
   selectedHero: Hero;
 
-  onSelect(hero: Hero) { this.selectedHero = hero; }
+  public onSelect: Function;
+
+  public selectHero(hero: Hero) {
+    this.selectedHero = hero;
+  }
+
+  public ngOnInit() {
+    this.onSelect = this.selectHero.bind(this);
+  }
 }

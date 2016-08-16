@@ -18,28 +18,8 @@
   </md-toolbar>
 
   <div class="app-content">
-
-    <md-card *ngIf="selectedHero">
-      <img md-card-image alt="Porter" src="/images/bg.jpg">
-      <md-card-title>{{ selectedHero.name }} details!</md-card-title>
-      <md-card-content class="secondary">
-        <div><label>id: </label>{{ selectedHero.id }}</div>
-        <div>
-          <label>name: </label>
-          <input [(ngModel)]="selectedHero.name" placeholder="name">
-        </div>
-      </md-card-content>
-    </md-card>
-
-    <h2 style="text-align:center;">List of Heroes</h2>
-
-    <md-card *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
-      <md-card-content>{{ hero.id }}. {{ hero.name }}!</md-card-content>
-      <md-card-actions align="end">
-        <button md-button color="primary" (click)="onSelect(hero)">Select</button>
-      </md-card-actions>
-    </md-card>
-
+    <hero-list [heroes]="heroes" [onSelect]="onSelect"></hero-list>
+    <hero-detail *ngIf="selectedHero" [hero]="selectedHero"></hero-detail>
   </div>
 
 </md-sidenav-layout>

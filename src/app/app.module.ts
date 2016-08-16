@@ -26,7 +26,6 @@ import { MdIconModule } from '@angular2-material/icon/icon';
 // import {RtlModule} from '@angular2-material/core/rtl/dir';
 
 import { AppComponent }  from './app.component';
-import { TestComponent } from './test/test.component'
 
 @NgModule({
   imports: [
