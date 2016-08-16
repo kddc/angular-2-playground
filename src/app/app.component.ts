@@ -1,8 +1,4 @@
-import { Component } from '@angular/core';
-
-import {MD_CARD_DIRECTIVES} from '@angular2-material/card/card';
-import {MD_BUTTON_DIRECTIVES} from '@angular2-material/button/button';
-import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar/toolbar';
+import { OnInit, Component } from '@angular/core';
 
 import { Hero, HeroService, HeroListComponent, HeroDetailComponent } from './heroes';
 
@@ -14,7 +10,7 @@ import { Hero, HeroService, HeroListComponent, HeroDetailComponent } from './her
     providers  : [ HeroService ]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
@@ -22,7 +18,6 @@ export class AppComponent {
   heroService: HeroService;
 
   constructor(heroService: HeroService) {
-    this.heroes = heroService.getHeroes();
     this.heroService = heroService;
   }
 
@@ -32,5 +27,6 @@ export class AppComponent {
 
   ngOnInit() {
     this.onSelect = this.selectHero.bind(this);
+    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
   }
 }

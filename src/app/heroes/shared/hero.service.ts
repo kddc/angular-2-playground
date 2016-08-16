@@ -5,10 +5,16 @@ import { HEROES } from '../mock-heroes';
 
 @Injectable()
 export class HeroService {
-  public list: Hero[];
+  list: Hero[];
 
   getHeroes() {
     this.list = HEROES;
-    return this.list;
+    return Promise.resolve(HEROES);
+  }
+
+  getHeroesSlowly() {
+    return new Promise<Hero[]>(resolve =>
+      setTimeout(() => resolve(HEROES), 2000)
+    );
   }
 }
