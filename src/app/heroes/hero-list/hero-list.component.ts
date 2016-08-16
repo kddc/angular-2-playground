@@ -9,5 +9,6 @@ import { Hero } from '../shared/hero.model';
 })
 export class HeroListComponent {
   @Input() heroes: Hero[];
+  @Input() selectedHero: Hero;
   @Input() onSelect: Function;
 }
