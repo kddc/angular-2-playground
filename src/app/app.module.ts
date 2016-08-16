@@ -16,7 +16,7 @@ import { MdListModule } from '@angular2-material/list/list';
 import { MdIconModule } from '@angular2-material/icon/icon';
 // import {MdProgressCircleModule} from '@angular2-material/progress-circle/progress-circle';
 // import {MdProgressBarModule} from '@angular2-material/progress-bar/progress-bar';
-// import {MdInputModule} from '@angular2-material/input/input';
+import { MdInputModule } from '@angular2-material/input/input';
 // import {MdTabsModule} from '@angular2-material/tabs/tabs';
 // import {MdTooltipModule} from '@angular2-material/tooltip/tooltip';
 // import { MdRippleModule } from '@angular2-material/core/ripple/ripple';
@@ -35,6 +35,7 @@ import { AppComponent }  from './app.component';
     MdToolbarModule,
     MdCardModule,
     MdListModule,
+    MdInputModule,
     MdButtonModule,
     MdIconModule
   ],
