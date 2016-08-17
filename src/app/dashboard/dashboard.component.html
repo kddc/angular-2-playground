@@ -1,0 +1,12 @@
+<h2 style="text-align:center;">Dashboard</h2>
+
+<div class="card-grid">
+  <div class="card-grid-item" *ngFor="let hero of heroes">
+    <md-card>
+      <md-card-content>{{ hero.id }}. {{ hero.name }}!</md-card-content>
+      <md-card-actions align="end">
+        <button md-button color="primary" (click)="selectHero(hero)">Select</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

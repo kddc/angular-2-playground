@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Hero, HeroService, HeroListComponent, HeroDetailComponent } from '../shared/heroes';
 
 @Component({
-  selector: 'heroes',
-  templateUrl: './heroes.component.html',
-  directives: [ HeroListComponent, HeroDetailComponent ]
+  selector: 'dashboard',
+  templateUrl: './dashboard.component.html',
+  styles: [ require('./dashboard.component.scss').toString() ],
+  directives: [ HeroListComponent ]
 })
-export class HeroesComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
   heroService: HeroService;

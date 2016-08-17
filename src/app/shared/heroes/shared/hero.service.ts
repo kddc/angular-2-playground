@@ -13,8 +13,16 @@ export class HeroService {
   }
 
   getHeroesSlowly() {
-    return new Promise<Hero[]>(resolve =>
-      setTimeout(() => resolve(HEROES), 2000)
-    );
+    let _this = this;
+    return new Promise<Hero[]>(function(resolve) {
+      if (_this.list) {
+        resolve(_this.list);
+      } else {
+        setTimeout(function() {
+          _this.list = HEROES;
+          resolve(HEROES);
+        }, 2000);
+      }
+    });
   }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
+import { MdGridListModule } from '@angular2-material/grid-list/grid-list'
 import { MdToolbarModule } from '@angular2-material/toolbar/toolbar';
 import { MdButtonModule } from '@angular2-material/button/button';
 import { MdCardModule } from '@angular2-material/card/card';
@@ -13,7 +14,10 @@ import { MdInputModule } from '@angular2-material/input/input';
 import { AppComponent }  from './app.component';
 import { routing } from './app.routing';
 
-import { HeroesComponent, HeroService } from './heroes';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesComponent } from './heroes/heroes.component';
+
+import { HeroService } from './shared/heroes'
 
 @NgModule({
   imports: [
@@ -21,6 +25,7 @@ import { HeroesComponent, HeroService } from './heroes';
     FormsModule,
     routing,
 
+    MdGridListModule,
     MdSidenavModule,
     MdToolbarModule,
     MdCardModule,
@@ -31,6 +36,7 @@ import { HeroesComponent, HeroService } from './heroes';
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
     HeroesComponent
   ],
   providers: [
