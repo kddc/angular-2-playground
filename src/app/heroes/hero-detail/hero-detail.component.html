@@ -1,4 +1,8 @@
 <md-card>
+  <button (click)="goBack()">Back</button>
+</md-card>
+
+<md-card *ngIf="hero">
   <img md-card-image alt="Porter" src="/images/bg.jpg">
   <md-card-title>{{ hero.name }} details!</md-card-title>
   <md-card-content class="secondary">

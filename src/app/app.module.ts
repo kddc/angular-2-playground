@@ -15,9 +15,7 @@ import { AppComponent }  from './app.component';
 import { routing } from './app.routing';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroesComponent } from './heroes/heroes.component';
-
-import { HeroService } from './shared/heroes'
+import { HeroService, HeroesComponent, HeroListComponent, HeroDetailComponent } from './heroes';
 
 @NgModule({
   imports: [
@@ -37,7 +35,9 @@ import { HeroService } from './shared/heroes'
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroListComponent,
+    HeroDetailComponent
   ],
   providers: [
     HeroService

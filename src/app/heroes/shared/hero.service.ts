@@ -7,12 +7,12 @@ import { HEROES } from './mock-heroes';
 export class HeroService {
   list: Hero[];
 
-  getHeroes() {
-    this.list = HEROES;
-    return Promise.resolve(HEROES);
+  getHero(id: number) {
+    return this.getHeroes()
+      .then(heroes => heroes.find(hero => hero.id === id));
   }
 
-  getHeroesSlowly() {
+  getHeroes() {
     let _this = this;
     return new Promise<Hero[]>(function(resolve) {
       if (_this.list) {
@@ -21,7 +21,7 @@ export class HeroService {
         setTimeout(function() {
           _this.list = HEROES;
           resolve(HEROES);
-        }, 2000);
+        }, 1000);
       }
     });
   }

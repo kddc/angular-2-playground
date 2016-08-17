@@ -1,31 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Hero, HeroService, HeroListComponent, HeroDetailComponent } from '../shared/heroes';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription }  from 'rxjs/Rx';
 
 @Component({
   selector: 'heroes',
-  templateUrl: './heroes.component.html',
-  directives: [ HeroListComponent, HeroDetailComponent ]
+  templateUrl: './heroes.component.html'
 })
-export class HeroesComponent implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
-  heroService: HeroService;
+export class HeroesComponent implements OnInit, OnDestroy {
+  private sub: Subscription;
 
-  constructor(heroService: HeroService) {
-    this.heroService = heroService;
-  }
+  param: String;
 
-  onSelectHero(hero: Hero) {
-    this.selectedHero = hero;
-  }
-
-  // selectHero(hero: Hero) {
-  //   this.selectedHero = hero;
-  // }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // this.onSelect = this.selectHero.bind(this);
-    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+    this.sub = this.route.params.subscribe(params => {
+      this.param = params['id'];
+    });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }

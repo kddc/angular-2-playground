@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero, HeroService } from '../shared/heroes';
+import { Hero, HeroService } from '../heroes';
 
 @Component({
   selector: 'dashboard',
@@ -16,6 +16,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 }

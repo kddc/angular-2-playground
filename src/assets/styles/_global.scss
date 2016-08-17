@@ -16,3 +16,9 @@ md-card {
     padding: 0 7.5px;
   }
 }
+
+md-nav-list {
+  a.active .md-list-item {
+    background: #f8f8f8;
+  }
+}
