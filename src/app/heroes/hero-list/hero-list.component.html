@@ -3,6 +3,6 @@
 <md-card *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
   <md-card-content>{{ hero.id }}. {{ hero.name }}!</md-card-content>
   <md-card-actions align="end">
-    <button md-button color="primary" (click)="onSelect(hero)">Select</button>
+    <button md-button color="primary" (click)="selectHero(hero)">Select</button>
   </md-card-actions>
 </md-card>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 import { Hero } from '../shared/hero.model';
 
@@ -9,6 +9,11 @@ import { Hero } from '../shared/hero.model';
 })
 export class HeroListComponent {
   @Input() heroes: Hero[];
-  @Input() selectedHero: Hero;
-  @Input() onSelect: Function;
+  @Output() onSelect = new EventEmitter<Hero>();
+  selectedHero: Hero;
+
+  selectHero(hero: Hero) {
+    this.selectedHero = hero;
+    this.onSelect.emit(hero);
+  }
 }

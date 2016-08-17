@@ -21,12 +21,16 @@ export class AppComponent implements OnInit {
     this.heroService = heroService;
   }
 
-  selectHero(hero: Hero) {
+  onSelectHero(hero: Hero) {
     this.selectedHero = hero;
   }
 
+  // selectHero(hero: Hero) {
+  //   this.selectedHero = hero;
+  // }
+
   ngOnInit() {
-    this.onSelect = this.selectHero.bind(this);
+    // this.onSelect = this.selectHero.bind(this);
     this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
   }
 }

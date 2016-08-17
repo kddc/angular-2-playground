@@ -17,7 +17,8 @@
     Angular 2
   </md-toolbar>
   <div class="app-content">
-    <hero-list [heroes]="heroes" [selectedHero]="selectedHero" [onSelect]="onSelect"></hero-list>
+    {{ selectedHero }}
+    <hero-list [heroes]="heroes" (onSelect)="onSelectHero($event)"></hero-list>
     <hero-detail *ngIf="selectedHero" [hero]="selectedHero"></hero-detail>
   </div>
 
