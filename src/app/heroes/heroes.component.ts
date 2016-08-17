@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero, HeroListComponent, HeroDetailComponent, HeroService } from './index';
+import { Hero, HeroService, HeroListComponent, HeroDetailComponent } from './index';
 
 @Component({
   selector: 'heroes',
   templateUrl: './heroes.component.html',
-  directives: [ HeroListComponent, HeroDetailComponent ],
-  providers: [ HeroService ]
+  directives: [ HeroListComponent, HeroDetailComponent ]
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
-  onSelect: Function;
   heroService: HeroService;
 
   constructor(heroService: HeroService) {
