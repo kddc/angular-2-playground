@@ -11,6 +11,7 @@ import { MdIconModule } from '@angular2-material/icon/icon';
 import { MdInputModule } from '@angular2-material/input/input';
 
 import { AppComponent }  from './app.component';
+import { routing } from './app.routing';
 
 import { HeroesComponent, HeroService } from './heroes';
 
@@ -18,6 +19,7 @@ import { HeroesComponent, HeroService } from './heroes';
   imports: [
     BrowserModule,
     FormsModule,
+    routing,
 
     MdSidenavModule,
     MdToolbarModule,
