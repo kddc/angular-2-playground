@@ -7,6 +7,10 @@ md-sidenav-layout[fullscreen] {
   }
 }
 
+#menu-toggle:after {
+  display: none;
+}
+
 .md-button-ripple {
   display: none;
 }
