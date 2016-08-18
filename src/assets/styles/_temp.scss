@@ -1,4 +1,8 @@
 // temporary fixes
+md-sidenav-layout[fullscreen] {
+  position: absolute !important;
+}
+
 .md-button-ripple {
   display: none;
 }
