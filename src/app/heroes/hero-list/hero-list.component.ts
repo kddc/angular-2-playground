@@ -6,8 +6,7 @@ import { HeroListListComponent } from './hero-list-list/hero-list-list.component
 
 @Component({
   selector: 'hero-list',
-  templateUrl: './hero-list.component.html',
-  directives: [ HeroListListComponent ]
+  templateUrl: './hero-list.component.html'
 })
 export class HeroListComponent implements OnInit {
   heroes: Hero[];
