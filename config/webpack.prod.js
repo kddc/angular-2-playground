@@ -13,7 +13,7 @@ module.exports = function(env) {
 
 		output: {
 			path: helpers.root('dist'),
-			publicPath: '/',
+			publicPath: env.base || '/',
 			filename: '[name].[hash].js',
 			chunkFilename: '[id].[hash].chunk.js'
 		},
