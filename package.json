@@ -7,7 +7,7 @@
     "npm": ">=3.10.8"
   },
   "scripts": {
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail --env.base ''",
     "e2e:live": "npm run e2e -- --elementExplorer",
     "e2e": "npm run build && concurrently \"http-server dist -s -p 4200\" \"protractor\" --kill-others --success first",
     "pree2e": "npm run webdriver:update -- --standalone",
@@ -90,8 +90,7 @@
     "typescript": "^2.0.2",
     "webpack": "^2.1.0-beta.22",
     "webpack-dev-server": "^2.1.0-beta.4",
-    "webpack-merge": "^0.14.1",
-    "yargs": "^4.8.1"
+    "webpack-merge": "^0.14.1"
   },
   "keywords": [
     "Angular2"

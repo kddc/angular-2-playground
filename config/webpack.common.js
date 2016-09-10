@@ -2,7 +2,6 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
-var argv = require('yargs').argv;
 
 module.exports = {
 	entry: {
@@ -72,7 +71,7 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
-			base: argv.base || '/',
+			base: "/",
 			favicon: 'src/favicon.ico',
 			template: 'src/index.ejs'
 		})
