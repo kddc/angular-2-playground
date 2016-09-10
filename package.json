@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "some testing with the angular 2 framework",
   "engines": {
-    "node": ">=6.5.0",
-    "npm": ">=3.10.8"
+    "node": ">=5.10.1",
+    "npm": ">=3.10.6"
   },
   "scripts": {
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
