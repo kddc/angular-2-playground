@@ -1,7 +1,11 @@
 {
-  "name": "micro-start",
-  "version": "1.0.0",
-  "description": "micro-start",
+  "name": "angular-2-playground",
+  "version": "0.0.1",
+  "description": "some testing with the angular 2 framework",
+  "engines": {
+    "node": ">=5.10.1",
+    "npm": ">=3.10.6"
+  },
   "scripts": {
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "e2e:live": "npm run e2e -- --elementExplorer",
@@ -15,8 +19,6 @@
     "webdriver:update": "webdriver-manager update",
     "webdriver:start": "webdriver-manager start"
   },
-  "keywords": [],
-  "author": "Earl Sioson",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "2.0.0-rc.6",
@@ -90,5 +92,15 @@
     "webpack-merge": "^0.14.1",
     "yargs": "^4.8.1"
   },
-  "repository": {}
+  "keywords": [
+    "Angular2"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kddc/angular-2-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kddc/angular-2-playground/issues"
+  },
+  "homepage": "https://kddc.github.io/angular-2-playground/"
 }
