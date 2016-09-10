@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "e2e:live": "npm run e2e -- --elementExplorer",
-    "e2e": "npm run protractor",
+    "e2e": "npm run build && concurrently \"http-server dist -s -p 4200\" \"protractor\" --kill-others --success first",
     "pree2e": "npm run webdriver:update -- --standalone",
     "protractor": "protractor",
     "start": "webpack-dev-server --inline --progress --port 4200",
@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "http-server": "^0.9.0",
+    "concurrently": "^2.2.0",
     "@types/core-js": "^0.9.32",
     "@types/hammerjs": "^2.0.32",
     "@types/jasmine": "^2.2.33",
