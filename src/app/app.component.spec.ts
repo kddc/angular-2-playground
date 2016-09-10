@@ -1,3 +1,5 @@
+import { TestBed } from '@angular/core/testing';
+import { AppComponent } from './app.component';
 // import { AppComponent } from './app.component';
 //
 // import { async, inject } from '@angular/core/testing';
@@ -13,6 +15,18 @@ describe('Smoke test', () => {
     expect(true).toEqual(true, 'should pass');
   });
 });
+
+describe('Root', () => {
+	beforeEach(() => {
+		TestBed.configureTestingModule({ declarations: [AppComponent]});
+	});
+	it ('should work', () => {
+		expect(true).toBe(true);
+		// let fixture = TestBed.createComponent(RootComponent);
+		// expect(fixture.componentInstance instanceof RootComponent).toBe(true, 'should create RootComponent');
+	});
+});
+
 
 // describe('AppComponent with TCB', function () {
 //

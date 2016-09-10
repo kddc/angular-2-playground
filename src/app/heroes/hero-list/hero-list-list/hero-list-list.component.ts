@@ -6,7 +6,7 @@ import { Hero } from '../../shared/hero.model';
 @Component({
   selector   : 'hero-list-list',
   templateUrl: './hero-list-list.component.html',
-  styles: [ require('./hero-list-list.component.scss').toString() ]
+  // styles: [ require('./hero-list-list.component.scss').toString() ]
 })
 export class HeroListListComponent {
   @Input() heroes: Hero[];

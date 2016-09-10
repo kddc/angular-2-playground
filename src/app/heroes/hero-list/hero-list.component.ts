@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../shared/hero.model';
 import { HeroService } from '../shared/hero.service';
-import { HeroListListComponent } from './hero-list-list/hero-list-list.component';
+// import { HeroListListComponent } from './hero-list-list/hero-list-list.component';
 
 @Component({
   selector: 'hero-list',

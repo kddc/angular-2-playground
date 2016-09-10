@@ -1,22 +1,21 @@
 {
-  "compilerOptions": {
-    "target": "es5",
+	"compilerOptions": {
+		"target": "es5",
     "module": "commonjs",
+    "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "removeComments": false,
     "noImplicitAny": true,
-     "removeComments": false,
-    "suppressImplicitAnyIndexErrors": true
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true
-  },
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+    "suppressImplicitAnyIndexErrors": true,
+		"types": [
+			"hammerjs",
+			"jasmine",
+			"node",
+			"core-js",
+			"protractor",
+			"selenium-webdriver"
+		]
+	}
 }

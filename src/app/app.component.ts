@@ -1,10 +1,14 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 
+require('./app.component.scss')
+
 @Component({
+    // moduleId   : module.id,
     selector   : 'app',
     templateUrl: './app.component.html',
-    styles     : [ require('./app.component.scss').toString() ]
+    styleUrls: [ './app.component.scss' ]
+    // styles     : [ require('./app.component.scss') ]
 })
 
 export class AppComponent implements OnInit {

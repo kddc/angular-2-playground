@@ -21,7 +21,7 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroService, HeroesComponent, HeroListComponent, HeroDetailComponent } from './heroes';
+import { HeroService, HeroesComponent, HeroListComponent, HeroListListComponent, HeroDetailComponent } from './heroes';
 
 @NgModule({
   imports: [
@@ -30,21 +30,22 @@ import { HeroService, HeroesComponent, HeroListComponent, HeroDetailComponent } 
     routing,
     HttpModule,
 
-    MdGridListModule,
-    MdSidenavModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdListModule,
-    MdInputModule,
-    MdButtonModule,
-    MdIconModule
+    MdGridListModule.forRoot(),
+    MdSidenavModule.forRoot(),
+    MdToolbarModule.forRoot(),
+    MdCardModule.forRoot(),
+    MdListModule.forRoot(),
+    MdInputModule.forRoot(),
+    MdButtonModule.forRoot(),
+    MdIconModule.forRoot()
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
     HeroesComponent,
     HeroListComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroListListComponent
   ],
   providers: [
     HeroService
