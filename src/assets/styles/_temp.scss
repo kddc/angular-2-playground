@@ -1,16 +1,16 @@
-// temporary fixes
-md-sidenav-layout[fullscreen] {
-  position: absolute !important;
-  padding-top: 64px;
-  &.md-sidenav-opened {
-    z-index: 1;
-  }
-}
-
-#menu-toggle:after {
-  display: none;
-}
-
-.md-button-ripple {
-  display: none;
-}
+// // temporary fixes
+// md-sidenav-layout[fullscreen] {
+//   position: absolute !important;
+//   padding-top: 64px;
+//   &.md-sidenav-opened {
+//     z-index: 1;
+//   }
+// }
+//
+// #menu-toggle:after {
+//   display: none;
+// }
+//
+// .md-button-ripple {
+//   display: none;
+// }

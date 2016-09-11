@@ -8,16 +8,16 @@ export const heroesRoutes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent,
-    children: [
-      {
-        path: '',
-        component: HeroListComponent
-      },
-      {
-        path: ':id',
-        component: HeroDetailComponent
-      }
-    ]
+    // children: [
+    //   {
+    //     path: '',
+    //     component: HeroListComponent
+    //   },
+    //   {
+    //     path: ':id',
+    //     component: HeroDetailComponent
+    //   }
+    // ]
   }
 ];
 

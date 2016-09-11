@@ -1,5 +1,8 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
-import { Router, NavigationStart } from '@angular/router';
+import { Component, OnInit, ElementRef, AfterViewInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+
+import { Ng2AutoScrollerService } from './ng2-auto-scroller/ng2-auto-scroller.service';
 
 require('./app.component.scss')
 
@@ -11,18 +14,31 @@ require('./app.component.scss')
     // styles     : [ require('./app.component.scss') ]
 })
 
-export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
+export class AppComponent implements OnInit,AfterViewInit {
+  ng2AutoScrollerService: Ng2AutoScrollerService;
+  public title = 'Tour of Heroes';
+  private document:any;
 
-  constructor(myElement: ElementRef, private router: Router){
+  constructor(myElement: ElementRef, @Inject(DOCUMENT) document:any, private router: Router, ng2AutoScrollerService: Ng2AutoScrollerService){
     console.log(myElement);
+    this.document = document;
+    this.ng2AutoScrollerService = ng2AutoScrollerService;
   }
 
   ngOnInit() {
-    this.router.events
-    .filter(event => event instanceof NavigationStart)
-    .subscribe((event) => {
-      window.scrollTo(0,0)
+    this.ng2AutoScrollerService.addScroller(".md-sidenav-content")
+    // this.router.events
+    // .filter(event => event instanceof NavigationStart)
+    // .subscribe((event) => {
+    //   this.document.body.scrollTop = 0;
+    // });
+  }
+
+  public ngAfterViewInit():any {
+    this.router.events.subscribe((event:any) => {
+      if (event instanceof NavigationEnd) {
+        this.document.body.scrollTop = 0;
+      }
     });
   }
 }

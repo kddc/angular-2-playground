@@ -20,6 +20,7 @@ import { MdInputModule } from '@angular2-material/input/input';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
+import { Ng2AutoScrollerModule } from './ng2-auto-scroller/ng2-auto-scroller.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroService, HeroesComponent, HeroListComponent, HeroListListComponent, HeroDetailComponent } from './heroes';
 
@@ -29,6 +30,8 @@ import { HeroService, HeroesComponent, HeroListComponent, HeroListListComponent,
     FormsModule,
     routing,
     HttpModule,
+
+    Ng2AutoScrollerModule,
 
     MdGridListModule.forRoot(),
     MdSidenavModule.forRoot(),
